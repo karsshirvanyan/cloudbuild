@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/karsshirvanyan/cloudbuild/issues"
   },
-  "homepage": "https://github.com/karsshirvanyan/cloudbuild#readme"
+  "homepage": "https://github.com/karsshirvanyan/cloudbuild#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
