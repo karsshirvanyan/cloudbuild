@@ -1,0 +1,15 @@
+steps:
+  # build the container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["build", "-t", "gcr.io/homeprojects-271419/hw:v1", "."]
+  # push container image
+- name: "gcr.io/cloud-builders/docker"
+  args: ["push", "gcr.io/homeprojects-271419/hw:v1"]
+  # deploy container image to GKE
+- name: "gcr.io/cloud-builders/gke-deploy"
+  args:
+  - run
+  - --filename=dpl.yaml
+  - --image=gcr.io/homeprojects-271419/hw:v1
+  - --location=us-central1-c
+  - --cluster=gke
