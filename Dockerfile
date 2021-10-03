@@ -8,6 +8,9 @@ FROM node:10 AS builder
 WORKDIR /app
 # Copy all files from current directory to working dir in image
 COPY . .
+COPY ./certs/cert.crt /etc/nginx/cert.crt
+COPY ./certs/cert.key /etc/nginx/cert.key
+COPY ./nginx-default.conf /etc/nginx/conf.d/default.conf
 # install node modules and build assets
 RUN yarn install && yarn build
 
