@@ -1,7 +1,15 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: lateread-dev
+
+---
+
 apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nodejs-deployment
+  namespace: lateread-dev
 spec:
   selector:
     matchLabels:
@@ -24,6 +32,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: nodejs-service
+  namespace: lateread-dev
 spec:
   selector:
     app: nodejs
