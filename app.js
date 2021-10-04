@@ -7,4 +7,5 @@ app.get('/api', (req, res) => {
         message: "hello"
     });
 });
+
 app.listen(3000, () => console.log('Server ready'))
