@@ -8,15 +8,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      <div>
-        <LoginButton/>
-      </div>
-      <div>
-        <LogoutButton/>
-      </div>
-      <div>
-        <Profile></Profile>
-      </div>
+      aaaaaaa
     </div>
 
   );
