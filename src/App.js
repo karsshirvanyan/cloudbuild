@@ -7,10 +7,17 @@ import './App.css';
 
 function App() {
   return (
-    <div>
-      aaaaaaa
-    </div>
-
+    <>
+      <div>
+        <LoginButton></LoginButton>
+      </div>
+      <div>
+        <LogoutButton></LogoutButton>
+      </div>
+      <div>
+        <Profile></Profile>
+      </div>
+    </>
   );
 }
 
